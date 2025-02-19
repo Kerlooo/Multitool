@@ -1,0 +1,8 @@
+scapy     
+psutil        
+requests      
+pyOpenSSL     
+python-nmap   
+watchdog      
+Pillow          
+cryptography  

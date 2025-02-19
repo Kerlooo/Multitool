@@ -1,11 +1,11 @@
 import os            # system commands
 import socket         # port scanning, dns, connections
-import scapy.all     # network analysis
+import scapy    # network analysis
 import psutil        # system monitoring
 import hashlib       # hashing
 import requests      # http requests
-#import pyOpenSSL     # SSL certificates 
-#import python-nmap   # network scanning
+import OpenSSL     # SSL certificates 
+import nmap   # network scanning
 import watchdog      # file system monitoring
 import PIL          # metadata extraction
 import ipaddress    # IP handling
@@ -48,6 +48,20 @@ def network():
     print("  [3] Ping Sweep")
     print("   [4] IP Geolocation")
 
+    c = str(input("Choose an option: "))
+
+    if c == "1":
+        port_scan()
+    elif c == "2":
+        dns_lookup()
+    elif c == "3":
+        ping_sweep()
+    elif c == "4":
+        ip_geo()
+    else:
+        print("Invalid choice")
+        network()
+
 
 def system():
     os.system('clear')
@@ -71,4 +85,3 @@ def utilities():
 
 if __name__ == "__main__":
     main()
-    
